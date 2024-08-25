@@ -15,19 +15,26 @@
     <!------------------------------------------------- header ------------------------------------------------->
     <header>
       <h2 class="h2__header">Free Shipping on US Orders Over $60</h2>
-      <div class="nav__flex-header">         
+      <div class="nav__flex-header">
+        <button class="burger-menu" aria-label="Open menu">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+        <div class="nav__flex-wrapper">     
           <ul class="nav__flex">
             <li><a href="#">Shop</a></li>
             <li><a href="#">The Edit</a></li>
             <li><a href="#">Our Story</a></li>
             <li><a href="#">Reviews</a></li>
           </ul>
-          <img class="logo__header" src="img/nav/logo.png" alt="logo">
-           <div class="basket__flex-header">
-            <p class="p__basket-account">Account</p>
-            <img class="ico__basket" src="img/nav/ico.svg" alt="ico">
-            <p claass="p__basket-number" >0</p>
-           </div>
+        </div> 
+        <img class="logo__header" src="img/nav/logo.png" alt="logo">
+        <div class="basket__flex-header">
+          <p class="p__basket-account">Account</p>
+          <img class="ico__basket" src="img/nav/ico.svg" alt="ico">
+          <p class="p__basket-number" >0</p>
+        </div>
         </div>
       <div class="container">        
           <div class="background__header">
@@ -152,5 +159,10 @@
         <p class="p__footer bottom">© 2021 dae . All rights reserved.</p>
       </div>
     </footer>
+    <script>
+      document.querySelector('.burger-menu').addEventListener('click', function() {
+        document.querySelector('.nav__flex-wrapper').classList.toggle('active');
+      });
+    </script>
   </body>
 </html>
