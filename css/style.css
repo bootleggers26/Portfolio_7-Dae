@@ -317,7 +317,6 @@ a {
   margin-bottom: 49px;
 }
 .gallery__section4 {
-  position: relative;
 }
 .top {
   display: flex;
@@ -345,7 +344,7 @@ a {
 /* footer */
 footer {
   background-color: #f6f4ec;
-  height: 401px;
+  padding-bottom: 30px;
 }
 .flex__footer {
   display: flex;
@@ -508,6 +507,7 @@ footer {
   .p__footer.bottom {
     display: flex;
     justify-content: space-around;
+    margin-left: 0;
   }
   .img__section3 {
     padding-left: 20px;
@@ -523,6 +523,30 @@ footer {
     max-height: auto;
     padding: 0;
   }
+  .ul__footer {
+    gap: 50px;
+  }
+  .text__section3 {
+    width: 100%; /* Увеличиваем ширину до 100% */
+    height: auto; /* Автоматическая высота */
+    top: 0; /* Убираем смещение по вертикали */
+    left: 0; /* Убираем смещение по горизонтали */
+    margin-top: 20px; /* Добавляем отступ сверху, чтобы было пространство между изображением и текстом */
+    position: relative; /* Убираем абсолютное позиционирование, чтобы элемент не "вылезал" за пределы контейнера */
+  }
+  .p__section-readMore {
+    margin-bottom: 50px;
+  }
+  .flex__section3 {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .flex__footer {
+    flex-wrap: wrap;
+    min-height: 401px;
+  }
 }
 @media screen and (max-width: 482px) {
   .item__section1 {
@@ -535,7 +559,8 @@ footer {
     gap: 20px;
   }
   .img__section3,
-  .img__section3 {
+  .img__section1,
+  .text__section3 {
     width: 100%;
   }
 }
